@@ -8,11 +8,11 @@ class IpToCountry(models.Model):
     >>> # Create a IpToCountry
     >>> i = IpToCountry.objects.create(IP_FROM='a', IP_TO='a', COUNTRY_CODE2='a',COUNTRY_CODE3='a', COUNTRY_NAME='a')
     """
-    IP_FROM = models.CharField(maxlength=20)
-    IP_TO = models.CharField(maxlength=20)
-    COUNTRY_CODE2 = models.CharField(maxlength = 2)
-    COUNTRY_CODE3 = models.CharField(maxlength = 3)
-    COUNTRY_NAME = models.CharField(maxlength = 50)     
+    IP_FROM = models.CharField(max_length=20)
+    IP_TO = models.CharField(max_length=20)
+    COUNTRY_CODE2 = models.CharField(max_length = 2)
+    COUNTRY_CODE3 = models.CharField(max_length = 3)
+    COUNTRY_NAME = models.CharField(max_length = 50)     
 
     def __str__(self):
         return "%s %s %s" % (self.IP_FROM ,self.IP_TO, self.COUNTRY_NAME) 
