@@ -1,2 +1,1 @@
-{% load iptocountry_filter %}
-{{ object.ip_address|get_country2:{{ MEDIA_URL }}+"/iptocountry/flag/"}}
+{% load iptocountry_flag %}{% get_flag object.ip_address as flag %}<img src="{{ flag.flag_url }}" alt="{{ flag.COUNTRY_NAME|lower }}" />
